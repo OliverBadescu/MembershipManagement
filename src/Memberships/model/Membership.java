@@ -10,7 +10,7 @@ public class Membership {
     private double price;
     private String description;
 
-    public Membership(String type, int id, String name, String description, double price) {
+    public Membership(String type, int id, String name,double price, String description ) {
         this.type = type;
         this.id = id;
         this.name = name;
