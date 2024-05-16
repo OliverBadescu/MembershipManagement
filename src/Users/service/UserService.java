@@ -76,4 +76,10 @@ public class UserService {
 
         return text;
     }
+
+    public void stergeCont(Member member){
+
+        this.users.remove(member);
+
+    }
 }

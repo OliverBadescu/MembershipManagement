@@ -64,7 +64,7 @@ public class Membership {
         text+= "Id: " + this.id + "\n";
         text+="Name: " + this.name + "\n";
         text+="Price: " + this.price + "/month" + "\n";
-        text+="Description" + this.description +"/n";
+        text+="Description: " + this.description +"\n";
         return text;
 
     }

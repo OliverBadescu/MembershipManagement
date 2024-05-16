@@ -5,8 +5,8 @@ public class Netflix extends Membership{
     private String pachet;
 
 
-    public Netflix(String type, int id, String name, double price, String description, String pachet) {
-        super(type, id, name, price, description);
+    public Netflix( int id, String name, double price, String description, String pachet) {
+        super("Netflix", id, name, price, description);
         this.pachet = pachet;
     }
 

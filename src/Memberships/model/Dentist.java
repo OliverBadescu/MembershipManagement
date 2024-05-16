@@ -6,8 +6,8 @@ public class Dentist extends Membership {
 
     private int nrAppointmentsPerMonth;
 
-    public Dentist(String type, int id, String name, double price, String description, int nrAppointmentsPerMonth) {
-        super(type, id, name, price, description);
+    public Dentist(int id, String name, double price, String description, int nrAppointmentsPerMonth) {
+        super("Dentist", id, name, price, description);
         this.nrAppointmentsPerMonth = nrAppointmentsPerMonth;
     }
 

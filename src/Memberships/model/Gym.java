@@ -7,8 +7,8 @@ public class Gym extends Membership {
 
     private int nrSaliAccess;
 
-    public Gym(String type, int id, String name, double price, String description, int nrSaliAccess) {
-        super(type, id, name, price, description);
+    public Gym( int id, String name, double price, String description, int nrSaliAccess) {
+        super("Gym", id, name, price, description);
         this.nrSaliAccess = nrSaliAccess;
     }
 
