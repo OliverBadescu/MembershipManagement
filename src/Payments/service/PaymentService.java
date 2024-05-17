@@ -1,5 +1,6 @@
 package Payments.service;
 
+import ActiveMemberships.model.ActiveMemberships;
 import Payments.model.Payment;
 
 import java.io.File;
@@ -57,4 +58,34 @@ public class PaymentService {
         }
         return text+=this.payments.get(i);
     }
+
+
+    public int generateId(){
+
+        int id=(int) Math.round(Math.random()*1000+1);
+
+        while (findById(id)!=null){
+            id=(int) Math.round(Math.random()*1000+1);
+        }
+
+        return id;
+
+    }
+
+    public Payment findById(int id){
+        for (int i =0; i < payments.size();i++){
+            if(payments.get(i).getId() == id){
+                return payments.get(i);
+            }
+        }
+        return null;
+    }
+
+    public void newPayment(int customerId, double amount){
+
+        Payment payment = new Payment(generateId(), amount, "Membership", customerId);
+        this.payments.add(payment);
+
+    }
 }
+

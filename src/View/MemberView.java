@@ -143,6 +143,8 @@ public class MemberView {
             if(activeMembershipService.hasActiveMembership(this.member.getId(), membership.getId())){
                 activeMembershipService.addMembership(membership, this.member.getId());
                 System.out.println("Membershipul a fost activat!");
+                paymentService.newPayment(this.member.getId(), membership.getPrice());
+                paymentService.saveData();
             }else{
                 System.out.println("Membership este deja activat");
             }

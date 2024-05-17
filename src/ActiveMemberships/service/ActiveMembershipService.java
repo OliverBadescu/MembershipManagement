@@ -62,6 +62,13 @@ public class ActiveMembershipService {
 
     }
 
+    public void afisare(){
+        for(int i =0 ; i < list.size();i++){
+            System.out.println(list.get(i).descriere());
+        }
+    }
+
+
     public boolean hasActiveMembership(int customerId, int membershipId){
 
         for(int i =0; i < list.size(); i++){
@@ -138,5 +145,9 @@ public class ActiveMembershipService {
             }
         }
         return m;
+    }
+
+    public void delete(ActiveMemberships activeMemberships){
+        this.list.remove(activeMemberships);
     }
 }

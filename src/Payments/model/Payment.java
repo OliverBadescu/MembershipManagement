@@ -4,10 +4,10 @@ public class Payment {
 
     private int id;
     private int customerId;
-    private int amount;
+    private double amount;
     private String description;
 
-    public Payment(int id, int amount, String description, int customerId) {
+    public Payment(int id, double amount, String description, int customerId) {
         this.id = id;
         this.amount = amount;
         this.description = description;
@@ -18,7 +18,7 @@ public class Payment {
         String[] tokens = text.split(",");
         this.id = Integer.parseInt(tokens[0]);
         this.customerId = Integer.parseInt(tokens[1]);
-        this.amount = Integer.parseInt(tokens[2]);
+        this.amount = Double.parseDouble(tokens[2]);
         this.description = tokens[3];
     }
 
@@ -35,7 +35,7 @@ public class Payment {
     public void setCustomerId(int customerId) {
         this.customerId = customerId;
     }
-    public int getAmount() {
+    public double getAmount() {
         return amount;
     }
     public void setAmount(int amount) {

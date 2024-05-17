@@ -39,6 +39,17 @@ public class ActiveMemberships {
         this.customerId = customerId;
     }
 
+    public String descriere(){
+
+        String text = "";
+
+        text+= "Id: " + this.id + "\n";
+        text+="Membership id: "  + this.membershipId + "\n";
+        text += "Customer id: "+ this.customerId + "\n";
+        return text;
+
+    }
+
     @Override
 
     public String toString(){

@@ -2,4 +2,4 @@ Admin,1,admin,123,Manager
 Admin,2,admin2,321,Viewer
 Member,3,test,pw,name,email,address,123
 Member,4,john,pass,John,john@email.com,Sibiu,4312
-Member,5,maria,pass,Maria,maria@email.com,Bucurest,07252
+Admin,370,test,test,Mod

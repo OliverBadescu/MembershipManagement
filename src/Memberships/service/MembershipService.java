@@ -109,6 +109,17 @@ public class MembershipService {
         }
         return null;
     }
+    public int generateId(){
+
+        int id=(int) Math.round(Math.random()*1000+1);
+
+        while (findById(id)!=null){
+            id=(int) Math.round(Math.random()*1000+1);
+        }
+
+        return id;
+
+    }
 
     public void sortareDupaPretCrescator(){
 
@@ -182,6 +193,22 @@ public class MembershipService {
                 System.out.println(r.descriere());
             }
         }
+    }
+
+    public void delete(Membership membership){
+        this.memberships.remove(membership);
+    }
+
+    public boolean add(Membership membership){
+
+        for(int i =0 ;i< memberships.size();i++){
+            if(memberships.get(i).getName().equals(membership.getName())){
+                return false;
+            }
+        }
+        this.memberships.add(membership);
+        return true;
+
     }
 
 

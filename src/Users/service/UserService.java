@@ -1,5 +1,6 @@
 package Users.service;
 
+import Memberships.model.Membership;
 import Users.model.Admin;
 import Users.model.Member;
 import Users.model.Users;
@@ -81,5 +82,86 @@ public class UserService {
 
         this.users.remove(member);
 
+    }
+
+    public Member findById(int id){
+        for (int i =0; i < users.size();i++){
+            if(users.get(i) instanceof Member m){
+                if(m.getId() == id){
+                    return m;
+                }
+            }
+        }
+        return null;
+    }
+
+    public int generateId(){
+
+        int id=(int) Math.round(Math.random()*1000+1);
+
+        while (findById(id)!=null){
+            id=(int) Math.round(Math.random()*1000+1);
+        }
+
+        return id;
+
+    }
+
+    public boolean adaugareAdmin(Admin admin){
+
+        for(int i= 0 ; i < users.size();i++){
+            if(users.get(i) instanceof Admin a){
+                if(a.getUsername().equals(admin.getUsername())){
+                    return false;
+                }
+            }
+        }
+        users.add(admin);
+        return true;
+
+    }
+
+    public void afisareMembers(){
+        for(int i =0; i < users.size();i++){
+            if(users.get(i) instanceof Member m){
+                System.out.println(m.descriere());
+            }
+        }
+    }
+
+    public Member loginMember(String user, String parola){
+        for(int i =0; i < users.size();i++){
+            if(users.get(i) instanceof Member m){
+                if(m.getUsername().equals(user) && m.getPassword().equals(parola)){
+                    return m;
+                }
+            }
+        }
+        return null;
+    }
+
+    public Admin loginAdmin(String user,String parola){
+
+        for(int i =0; i < users.size();i++){
+            if(users.get(i) instanceof Admin a){
+                if(a.getUsername().equals(user) && a.getPassword().equals(parola)){
+                    return a;
+                }
+            }
+        }
+        return null;
+
+    }
+
+    public boolean inregistrareCustomer(Member member){
+        for(int i =0 ; i < users.size();i++){
+            if(users.get(i) instanceof Member m){
+                if(m.getUsername().equals(member.getUsername())){
+                    return false;
+                }
+            }
+        }
+        users.add(member);
+        return true;
     }
 }

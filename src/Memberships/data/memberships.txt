@@ -1,4 +1,4 @@
-Dentist,1,Dentist membership,250,Membership pentru dentist,8
-Gym,2,Gym membership,50,Membership pentru sali fitness,5
-Netflix,3,Netflix membership,25,Membership pentru netflix,Family
-Retail,4,Retail membership,50,Membership pentru magazine,10
+Dentist,1,Dentist membership,250.0,Membership pentru dentist,8
+Gym,2,Gym membership,50.0,Membership pentru sali fitness,5
+Netflix,3,Netflix membership,25.0,Membership pentru netflix,Family
+Gym,325,Test,500.0,test,5
