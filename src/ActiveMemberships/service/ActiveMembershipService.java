@@ -68,15 +68,14 @@ public class ActiveMembershipService {
         }
     }
 
-
     public boolean hasActiveMembership(int customerId, int membershipId){
 
         for(int i =0; i < list.size(); i++){
             if(list.get(i).getMembershipId() == membershipId && list.get(i).getCustomerId() == customerId){
-                return false;
+                return true;
             }
         }
-        return true;
+        return false;
 
     }
 

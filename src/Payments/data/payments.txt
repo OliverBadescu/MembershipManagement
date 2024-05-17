@@ -1,4 +1,4 @@
-1,1,200,Gym membership
-2,2,100,Dentist membership
-3,3,300,Retail membership
-4,4,50,Netflix membership
+1,1,200.0,Gym membership
+2,2,100.0,Dentist membership
+3,3,300.0,Retail membership
+4,4,50.0,Netflix membership
